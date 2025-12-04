@@ -20,34 +20,53 @@ A Python tool to find members that are common across multiple WhatsApp groups.
 
 ## Installation
 
-1. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+**Quick Setup (Recommended):**
+```bash
+./setup.sh
+```
 
-2. **Make the script executable (optional):**
-   ```bash
-   chmod +x whatsapp_group_analyzer.py
-   ```
+The setup script will automatically:
+- Check for Python 3 and pip3
+- Install all required dependencies
+- Configure the environment
+
+**Manual Installation (Alternative):**
+If you prefer manual setup:
+```bash
+pip install -r requirements.txt
+```
+
+**Using Virtual Environment (Optional):**
+For isolated dependency management:
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
 
 ## Usage
 
-1. **Run the script:**
+1. **First time setup:**
    ```bash
-   python whatsapp_group_analyzer.py
+   ./setup.sh
    ```
 
-2. **Authenticate:**
+2. **Run the script:**
+   ```bash
+   python3 whatsapp_group_analyzer.py
+   ```
+
+3. **Authenticate:**
    - A Chrome window will open with WhatsApp Web
    - Scan the QR code with your WhatsApp mobile app
    - Wait for the page to load completely
 
-3. **Select groups:**
+4. **Select groups:**
    - The script will list all your groups
    - Enter group numbers to analyze (e.g., `1,3,5` or `1-3,7-9`)
    - Confirm your selection
 
-4. **View results:**
+5. **View results:**
    - Common members will be displayed in the terminal
    - A detailed CSV report will be generated with:
      - List of selected groups
@@ -120,4 +139,3 @@ Free to use and modify for personal purposes.
 ## Disclaimer
 
 This tool uses WhatsApp Web automation and is not officially supported by WhatsApp. Use at your own discretion.
-
